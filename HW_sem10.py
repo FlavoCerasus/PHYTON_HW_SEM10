@@ -18,7 +18,7 @@ print(f"Список: {lst}")
 print()
 # # 1 - С использованием функции "get_dummies":
 one_hot_enc_var1 = pd.get_dummies(data, columns=['whoAmI'])
-print(one_hot_enc_var1.head(n=20))
+print(one_hot_enc_var1.head(n=len(lst))
 
 # # 2 - Без использования функции:
 one_hot_enc_var2 = pd.DataFrame({'whoAmI': lst})
@@ -26,4 +26,4 @@ one_hot_enc_var2.loc[one_hot_enc_var2['whoAmI'] == 'robot', 'r_group'] = '1'
 one_hot_enc_var2.loc[one_hot_enc_var2['whoAmI'] != 'robot', 'r_group'] = '0'
 one_hot_enc_var2.loc[one_hot_enc_var2['whoAmI'] == 'human', 'h_group'] = '1'
 one_hot_enc_var2.loc[one_hot_enc_var2['whoAmI'] != 'human', 'h_group'] = '0'
-print(one_hot_enc_var2.head(n=20))
+print(one_hot_enc_var2.head(n=len(lst))
