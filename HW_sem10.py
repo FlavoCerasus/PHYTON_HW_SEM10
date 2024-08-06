@@ -14,7 +14,8 @@ random.shuffle(lst)
 data = pd.DataFrame({'whoAmI': lst})
 data.head()
 
-print(lst)
+print(f"Список: {lst}")
+print()
 # # 1 - С использованием функции "get_dummies":
 one_hot_enc_var1 = pd.get_dummies(data, columns=['whoAmI'])
 print(one_hot_enc_var1.head(n=20))
